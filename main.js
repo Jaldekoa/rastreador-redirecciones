@@ -18,7 +18,7 @@ function __addTrace(res, arr = []) {
 
     const traceObj = {
         from: res.url,
-        status: `${res.status} - ${res.statusText}`,
+        status: res.status,
         to: nextLocation,
     }
 
