@@ -1,8 +1,8 @@
-async function trace(url = 'https://t.co/g7XNxHrQCv', redirectArr = []) {
+async function trace(url, redirectArr = []) {
     const OPTIONS = { method: 'HEAD', redirect: 'manual' };
     const response = await fetch(url, OPTIONS);
 
-    const [newURL] = addTrace(response, redirectArr);
+    const [newURL] = __addTrace(response, redirectArr);
 
     if (newURL && response.status >= 300 && response.status < 400)
         return await trace(newURL, redirectArr);
@@ -10,15 +10,20 @@ async function trace(url = 'https://t.co/g7XNxHrQCv', redirectArr = []) {
     return redirectArr;
 };
 
-function addTrace(res, arr = []) {
+function __addTrace(res, arr = []) {
+    let nextLocation = res.headers.get('location');
+
+    if (nextLocation && !nextLocation.startsWith('http'))
+        nextLocation = new URL(nextLocation, res.url).href;
+
     const traceObj = {
         from: res.url,
         status: `${res.status} - ${res.statusText}`,
-        to: res.headers.get('location'),
+        to: nextLocation,
     }
 
     arr.push(traceObj)
-    return [res.headers.get('location'), arr];
+    return [nextLocation, arr];
 };
 
 function drawTable(redirectArr) {
@@ -59,6 +64,8 @@ function drawTable(redirectArr) {
 
     thead.append(td1, td2, td3);
     table.append(thead, tbody);
-}
 
-console.table(await trace());
+    return table;
+};
+
+export { trace, drawTable };
