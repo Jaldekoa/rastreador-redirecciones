@@ -1,9 +1,10 @@
 # 🚀 Rastreador de Redirecciones
 
-[![Cloudflare Workers](https://img.shields.io/badge/Cloudflare-Workers-F38020?style=for-the-badge&logo=cloudflare&logoColor=white)](https://workers.cloudflare.com/)
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![Cloudflare Workers](https://img.shields.io/badge/Cloudflare-Workers-F38020?style=for-the-badge&logo=cloudflare&logoColor=white)](https://workers.cloudflare.com/)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Rastreador%20Redirecciones-0051AF?style=for-the-badge&logo=cloudflare-pages&logoColor=white)](https://rastreador-redirecciones.pages.dev)
 
 Una herramienta web ligera y eficiente diseñada para analizar la cadena completa de redirecciones de cualquier URL. Ideal para tareas de SEO, depuración de enlaces y auditorías de seguridad.
 
@@ -56,7 +57,7 @@ sequenceDiagram
 ```
 
 > [!IMPORTANT]
-> Estrategia Manual: En el Worker, se utiliza la opción { redirect: 'manual' }. Esto permite interceptar el código 301/302 y extraer la cabecera `location` manualmente antes de decidir si continuar al siguiente salto.
+> **Estrategia Manual:** En el Worker, se utiliza la opción `{ redirect: 'manual' }`. Esto permite interceptar el código 301/302 y extraer la cabecera `location` manualmente antes de decidir si continuar al siguiente salto.
 
 ---
 
@@ -91,7 +92,7 @@ sequenceDiagram
 
 3. Actualizar el Frontend:
 
-En script.js, cambia la constante WORKER_URL por la URL generada por tu despliegue en Cloudflare.
+En `script.js`, cambia la constante `WORKER_URL` por la URL generada por tu despliegue en Cloudflare.
 
 ---
 
