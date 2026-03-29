@@ -1,0 +1,4 @@
+{
+    "name": "rastreador-redirecciones",
+    "main": "worker.js"
+}
