@@ -4,6 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap"
+        rel="stylesheet">
     <title>Rastreador de Redirecciones</title>
     <link rel="stylesheet" href="./style.css" />
     <script type="module" src="./main.js"></script>
@@ -20,7 +25,27 @@
             <button type="button" id="form__button">Rastrear URL</button>
         </form>
 
-        <div id="results-container"></div>
+        <table id="results-container">
+            <thead>
+                <th>Nº</th>
+                <th>Código</th>
+                <th>Dirección</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>301</td>
+                    <td>t.co</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>200</td>
+                    <td>github.com</td>
+                </tr>
+            </tbody>
+
+            <caption>Front-end web developer course 2021</caption>
+        </table>
     </main>
 
 </body>
