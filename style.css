@@ -42,3 +42,19 @@ table {
     margin: 4% 0;
     width: 100%;
 }
+
+.status-ok {
+    background-color: color-mix(in srgb, green, transparent 50%);
+}
+
+.status-redirect {
+    background-color: color-mix(in srgb, orange, transparent 50%);
+}
+
+.status-bad-request {
+    background-color: color-mix(in srgb, red, transparent 50%);
+}
+
+.status-server-error {
+    background-color: color-mix(in srgb, purple, transparent 50%);
+}
