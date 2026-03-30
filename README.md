@@ -8,7 +8,7 @@
 
 Una herramienta web ligera y eficiente diseñada para analizar la cadena completa de redirecciones de cualquier URL. Ideal para tareas de SEO, depuración de enlaces y auditorías de seguridad.
 
-![Previsualización del rastreador de redirecciones](./Thumbnail.webp)
+![Previsualización del rastreador de redirecciones](./Thumbnail.png)
 
 ---
 
