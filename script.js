@@ -52,7 +52,11 @@ function drawTable(redirectArr) {
         const tr2 = document.createElement('td');
         tr2.textContent = `${element.status}`;
         const tr3 = document.createElement('td');
-        tr3.textContent = `${element.from}`;
+        const a = document.createElement('a');
+        a.setAttribute('href', `${element.from}`);
+        a.setAttribute('target', '_blank');
+        a.textContent = `${element.from}`;
+        tr3.appendChild(a);
 
         tr.append(tr1, tr2, tr3);
         tbody.appendChild(tr);
