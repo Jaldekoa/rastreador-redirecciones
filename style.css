@@ -116,25 +116,34 @@ tbody td {
     border-bottom: 1px solid var(--border);
 }
 
-tr.status-ok {
+tr.status-ok,
+tr.status-ok a:link,
+tr.status-ok a:visited {
     background-color: var(--status-ok-bg);
     color: var(--status-ok-text);
 }
 
-tr.status-redirect {
+tr.status-redirect,
+tr.status-redirect a:link,
+tr.status-redirect a:visited {
     background-color: var(--status-redirect-bg);
     color: var(--status-redirect-text);
 }
 
-tr.status-bad-request {
+tr.status-bad-request,
+tr.status-bad-request a:link,
+tr.status-bad-request a:visited {
     background-color: var(--status-bad-request-bg);
     color: var(--status-bad-request-text);
 }
 
-tr.status-server-error {
+tr.status-server-error,
+tr.status-server-error a:link,
+tr.status-server-error a:visited {
     background-color: var(--status-server-error-bg);
     color: var(--status-server-error-text);
 }
+
 
 @media (max-width: 640px) {
     h1 {
